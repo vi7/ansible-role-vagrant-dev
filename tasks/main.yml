@@ -4,5 +4,5 @@
     name: "{{ item.name }}"
     description: "{{ item.descr }}"
     baseurl: "{{ item.baseurl }}"
-    with_items:
-      - { name: 'epel', descr: 'EPEL YUM repo', baseurl: 'https://download.fedoraproject.org/pub/epel/$releasever/$basearch/' }
+  with_items:
+    - { name: 'epel', descr: 'EPEL YUM repo', baseurl: 'https://download.fedoraproject.org/pub/epel/$releasever/$basearch/' }
