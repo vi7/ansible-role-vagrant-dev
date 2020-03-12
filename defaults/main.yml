@@ -1,2 +1,14 @@
 ---
 # defaults file for ansible-role-vagrant-dev
+repos:
+- name: epel
+  descr: EPEL YUM repo
+  baseurl: 'https://download.fedoraproject.org/pub/epel/$releasever/$basearch/'
+packages:
+- vim-enhanced
+- tmux2u
+- lsof
+- bind-utils
+- nmap-ncat
+- nmap
+

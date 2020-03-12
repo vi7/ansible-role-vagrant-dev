@@ -1,8 +1,12 @@
 ---
-- name: Install EPEL repo
+- name: Install repos
   yum_repository:
     name: "{{ item.name }}"
     description: "{{ item.descr }}"
     baseurl: "{{ item.baseurl }}"
-  with_items:
-    - { name: 'epel', descr: 'EPEL YUM repo', baseurl: 'https://download.fedoraproject.org/pub/epel/$releasever/$basearch/' }
+  loop: "{{ repos }}"
+- name: Install packages
+  yum:
+    name: "{{ packages }}"
+    state: present
+
