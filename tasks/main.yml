@@ -1,12 +1,14 @@
 ---
 - name: Install repos
-  yum_repository:
+  ansible.builtin.yum_repository:
     name: "{{ item.name }}"
     description: "{{ item.descr }}"
     baseurl: "{{ item.baseurl }}"
   loop: "{{ repos }}"
+  when: ansible_facts['distribution'] == "CentOS"
+
 - name: Install packages
-  yum:
+  ansible.builtin.package:
     name: "{{ packages }}"
     state: present
 

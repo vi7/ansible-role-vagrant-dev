@@ -6,7 +6,8 @@ repos:
   baseurl: 'https://download.fedoraproject.org/pub/epel/$releasever/$basearch/'
 packages:
 - vim-enhanced
-- tmux2u
+- bash-completion
+- tmux
 - lsof
 - bind-utils
 - nmap-ncat

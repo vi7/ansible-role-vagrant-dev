@@ -34,4 +34,5 @@ BSD
 Author Information
 ------------------
 
-Vitaliy Dmitriev <vi7alya@gmail.com>
+vi7
+
